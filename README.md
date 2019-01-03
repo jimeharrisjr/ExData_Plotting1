@@ -112,3 +112,10 @@ The four plots that you will need to construct are shown below.
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
+
+
+## MY SUBMISSION
+
+Each R script is designed to operate independently. Each one will read the zip file using fread and uncompresss it in memory using fread with unzip. If unzip is not available to R, the zip file can be unzipped manually, and the script altered to comment the zip fread and uncomment the normal txt file fread.
+
+The included R scripts were written in RStudio Version 1.1.453 with R version 3.5.2 on Mac OS X
