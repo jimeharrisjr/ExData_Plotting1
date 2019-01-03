@@ -1,7 +1,10 @@
 library(data.table)
 library(lubridate)
 
-dt<-fread('household_power_consumption.txt') # use efficient fread to load the data
+dt<-fread('unzip -p exdata_data_household_power_consumption.zip') # use efficient fread to load the data
+# If previous line fails on your platform (because unzip is not set up correctly), comment the above unzip the file manually and use instead:
+#dt<-fread('household_power_consumption.txt')
+
 dt[,datetime:=paste(Date,Time)] # create a combined datetime column
 dt[,Date:=dmy(Date)] # use lubridate to convert Date from character to date
 dt[,Global_active_power:=as.numeric(Global_active_power)] # convert Global_active_power to numeric
